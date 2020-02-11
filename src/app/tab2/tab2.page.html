@@ -6,4 +6,12 @@
   </ion-toolbar>
 </ion-header>
 
-<ion-content></ion-content>
+<ion-content>
+  <ion-card *ngFor="let post of postList">
+
+    <ion-card-header (click)="openDetail(pid)"> {{ post['id'] }} </ion-card-header>
+    <ion-card-content> {{ post['title'] }} </ion-card-content>
+  
+  </ion-card>
+</ion-content>
+  
