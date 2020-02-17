@@ -4,19 +4,15 @@ import { PreloadAllModules, RouterModule, Routes } from '@angular/router';
 const routes: Routes = [
   {
     path: '',
-    loadChildren: () => import('./tabs/tabs.module').then(m => m.TabsPageModule)
+    loadChildren: () => import('./login/login.module').then( m => m.LoginPageModule)
   },
   {
-    path: 'contacts',
-    loadChildren: () => import('./contacts/contacts.module').then( m => m.ContactsPageModule)
+    path: 'liste-users',
+    loadChildren: () => import('./liste-users/liste-users.module').then( m => m.ListeUsersPageModule)
   },
   {
-    path: 'profile/pid',
-    loadChildren: () => import('./profile/profile.module').then( m => m.ProfilePageModule)
-  },
-  {
-    path: 'post-detail/pid',
-    loadChildren: () => import('./post-detail/post-detail.module').then( m => m.PostDetailPageModule)
+    path: 'user-detail/:id',
+    loadChildren: () => import('./user-detail/user-detail.module').then( m => m.UserDetailPageModule)
   }
 ];
 @NgModule({

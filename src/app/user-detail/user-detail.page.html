@@ -1,0 +1,59 @@
+<ion-header translucent>
+  <ion-toolbar>
+    <ion-title>User {{ id }}</ion-title>
+  </ion-toolbar>
+</ion-header>
+<ion-content fullscreen>
+  <ion-item style="text-align: center;padding-left: 60px;" >
+  <ion-avatar slot="start" style='height: 200px; width: 200px; ;'>
+    <ion-img [src]="picture" style='height: 200px; width: 200px;'></ion-img>
+  </ion-avatar>
+</ion-item>
+<ion-grid>
+<ion-row>
+  <ion-col size="6" style="font-weight: bold;" >
+    Nom  et Prenom:
+  </ion-col >
+  <ion-col size="6">
+    {{firstname}}  {{lastname}} 
+  </ion-col> 
+</ion-row>
+
+<ion-row>
+  <ion-col size="6"style="font-weight: bold;" >
+    Email:
+  </ion-col >
+  <ion-col size="6">
+    {{email}} 
+  </ion-col> 
+</ion-row>
+
+<ion-row>
+  <ion-col size="6" style="font-weight: bold;" >
+    Phone:
+  </ion-col >
+  <ion-col size="6">
+    {{phone}}   
+  </ion-col> 
+</ion-row>
+
+<ion-row>
+  <ion-col size="6" style="font-weight: bold;" >
+    Cell:
+  </ion-col >
+  <ion-col size="6">
+    {{cell}}  
+  </ion-col> 
+</ion-row>
+<ion-row>
+  <ion-col size="6" style="font-weight: bold;" >
+    Nat:
+  </ion-col >
+  <ion-col size="6">
+    {{nat}}  
+  </ion-col> 
+</ion-row>
+</ion-grid>
+
+</ion-content>
+

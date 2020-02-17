@@ -4,17 +4,17 @@ import { FormsModule } from '@angular/forms';
 
 import { IonicModule } from '@ionic/angular';
 
-import { ContactsPageRoutingModule } from './contacts-routing.module';
+import { ListeUsersPageRoutingModule } from './liste-users-routing.module';
 
-import { ContactsPage } from './contacts.page';
+import { ListeUsersPage } from './liste-users.page';
 
 @NgModule({
   imports: [
     CommonModule,
     FormsModule,
     IonicModule,
-    ContactsPageRoutingModule
+    ListeUsersPageRoutingModule
   ],
-  declarations: [ContactsPage]
+  declarations: [ListeUsersPage]
 })
-export class ContactsPageModule {}
+export class ListeUsersPageModule {}

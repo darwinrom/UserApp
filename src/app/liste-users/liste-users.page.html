@@ -1,0 +1,21 @@
+ <ion-header translucent>
+    <ion-toolbar>
+      <ion-title>App Users</ion-title>
+    </ion-toolbar>
+  </ion-header>
+  <ion-content fullscreen>
+
+    <ion-list>
+      <ion-list-header>Liste des utilisateurs</ion-list-header>
+      <ion-item  *ngFor="let user of UsersData " routerLink='/user-detail/{{user.id}}'>
+        <ion-avatar slot="start">
+          <ion-img [src]="user['picture']['thumbnail']"></ion-img>
+        </ion-avatar>
+        <ion-label>
+          <h2>{{ user["name"]["first"] }}  {{ user["name"]["last"] }}</h2>
+          <p>{{ user["email"] }}</p>
+        </ion-label>
+      </ion-item>  
+    </ion-list>
+</ion-content>
+  
