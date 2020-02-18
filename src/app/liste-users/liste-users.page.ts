@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { DataService } from '../services/data.service';
-import { Router } from '@angular/router';
+import { NavController } from '@ionic/angular';
 
 @Component({
   selector: 'app-liste-users',
@@ -11,7 +11,7 @@ export class ListeUsersPage implements OnInit {
 
   UsersData: any;
  
-  constructor(public apiService: DataService,private router: Router) {
+  constructor(public apiService: DataService,private nav: NavController) {
     this.UsersData = [];
   }
  
@@ -24,7 +24,10 @@ export class ListeUsersPage implements OnInit {
     this.apiService.getList().subscribe(response => {
       console.log(response);
       this.UsersData = response;
-    })
+    });
+  }
+  openDetails(id) {
+    this.nav.navigateRoot('user-detail/' + id );
   }
    
 }

@@ -1,6 +1,6 @@
 <ion-header translucent>
   <ion-toolbar>
-    <ion-title>User {{ id }}</ion-title>
+    <ion-icon name="arrow-back" style="zoom:2.5; color: darkblue; "  (click)="returnList()"> </ion-icon>
   </ion-toolbar>
 </ion-header>
 <ion-content fullscreen>
@@ -11,49 +11,82 @@
 </ion-item>
 <ion-grid>
 <ion-row>
-  <ion-col size="6" style="font-weight: bold;" >
-    Nom  et Prenom:
+  <ion-col size="3" style="font-weight: bold;" >
+    Nom  :
   </ion-col >
-  <ion-col size="6">
-    {{firstname}}  {{lastname}} 
+  <ion-col size="9">
+    {{lastname}} 
+  </ion-col> 
+</ion-row>
+<ion-row>
+  <ion-col size="3" style="font-weight: bold;" >
+     Prenom:
+  </ion-col >
+  <ion-col size="9">
+    {{firstname}}  
   </ion-col> 
 </ion-row>
 
 <ion-row>
-  <ion-col size="6"style="font-weight: bold;" >
+  <ion-col size="3"style="font-weight: bold;" >
     Email:
   </ion-col >
-  <ion-col size="6">
+  <ion-col size="9">
     {{email}} 
   </ion-col> 
 </ion-row>
+<ion-row>
+  <ion-col size="3" style="font-weight: bold;" >
+   Sexe:
+  </ion-col >
+  <ion-col size="9">
+    {{gender}}   
+  </ion-col> 
+</ion-row>
 
 <ion-row>
-  <ion-col size="6" style="font-weight: bold;" >
+  <ion-col size="3" style="font-weight: bold;" >
+    Age:
+  </ion-col >
+  <ion-col size="9">
+    {{age}}  
+  </ion-col> 
+</ion-row>
+<ion-row>
+  <ion-col size="3" style="font-weight: bold;" >
+    Ville:
+  </ion-col >
+  <ion-col size="9">
+    {{ville}}  
+  </ion-col> 
+</ion-row>
+<ion-row>
+  <ion-col size="3" style="font-weight: bold;" >
     Phone:
   </ion-col >
-  <ion-col size="6">
+  <ion-col size="9">
     {{phone}}   
   </ion-col> 
 </ion-row>
 
 <ion-row>
-  <ion-col size="6" style="font-weight: bold;" >
+  <ion-col size="3" style="font-weight: bold;" >
     Cell:
   </ion-col >
-  <ion-col size="6">
+  <ion-col size="9">
     {{cell}}  
   </ion-col> 
 </ion-row>
 <ion-row>
-  <ion-col size="6" style="font-weight: bold;" >
+  <ion-col size="3" style="font-weight: bold;" >
     Nat:
   </ion-col >
-  <ion-col size="6">
+  <ion-col size="9">
     {{nat}}  
   </ion-col> 
 </ion-row>
 </ion-grid>
+
 
 </ion-content>
 

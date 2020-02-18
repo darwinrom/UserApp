@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { Result } from '../models/results';
 import { DataService } from '../services/data.service';
+import { NavController } from '@ionic/angular';
 
 @Component({
   selector: 'app-user-detail',
@@ -20,9 +21,11 @@ export class UserDetailPage implements OnInit {
   cell: string;
   picture;
   nat: string;
+  ville;
+  age;
  
   constructor( public activatedRoute: ActivatedRoute,public router: Router,
-    public apiService: DataService
+    public apiService: DataService,private nav: NavController
   ) {
   }
  
@@ -42,6 +45,12 @@ export class UserDetailPage implements OnInit {
       this.picture=this.data.picture.large;
       this.nat=this.data.nat;
       this.id=this.data.id;
+      this.ville = this.data.location.city;
+      this.age = this.data.dob.age;
     })
+  }
+
+  returnList(){
+    this.nav.navigateRoot('liste-users' );
   }
 }

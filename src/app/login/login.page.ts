@@ -14,38 +14,33 @@ export class LoginPage implements OnInit {
  username: string;
  password: string;
  UsersData: any;
+ trouve;
  
  constructor(public apiService: DataService,private router: Router) {
    this.UsersData = [];
+   this.trouve = false;
  }
 
  ngOnInit() {
-   this.getAllUsers();
+  
  }
 
- getAllUsers() {
-   //Get saved list of students
-   this.apiService.getList().subscribe(response => {
-     console.log(response);
+ findUser() {
+   /* Get saved list of users */
+     this.apiService.getList().subscribe(response => {
      this.UsersData = response;
-   })
- }
-
-  // fonction se connecter
-  login() { 
-    let trouve : boolean = false;
-    this.UsersData.forEach(user => {
-      if (user['login']['username'] === this.username && user['login']['password'] === this.password ){
-        trouve = true ;  
-        this.router.navigate(['/liste-users']);
-      } 
-    });
-    if (trouve === false ) {
-      this.username = '';
-      this.password = '';
-      document.getElementById('lab').innerText = 'Authentification échouée';
-      this.router.navigate(['/']);
+   });
+   // Verify user connected
+     this.UsersData.forEach(user => {
+    if (user.login.username === this.username && user.login.password === this.password ){
+         this.trouve = true ;  
+         this.router.navigate(['/liste-users']);
     }
-  }
-
+  });
+     if (this.trouve === false ) {
+          this.username = '';
+          this.password = '';
+          document.getElementById('lab').innerText = 'Authentification échouée';
+    }
+ }
 }

@@ -1,13 +1,13 @@
  <ion-header translucent>
     <ion-toolbar>
-      <ion-title>App Users</ion-title>
+      <ion-title  style="text-align: center;">App Users</ion-title>
     </ion-toolbar>
   </ion-header>
   <ion-content fullscreen>
 
     <ion-list>
       <ion-list-header>Liste des utilisateurs</ion-list-header>
-      <ion-item  *ngFor="let user of UsersData " routerLink='/user-detail/{{user.id}}'>
+      <ion-item  *ngFor="let user of UsersData" (click)="openDetails(user.id)">
         <ion-avatar slot="start">
           <ion-img [src]="user['picture']['thumbnail']"></ion-img>
         </ion-avatar>

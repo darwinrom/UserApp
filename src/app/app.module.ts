@@ -11,9 +11,10 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 
 
+
 @NgModule({
   declarations: [AppComponent],
-  entryComponents: [], // importation du module
+  entryComponents: [],
   imports: [HttpClientModule, BrowserModule, IonicModule.forRoot(), AppRoutingModule],
   providers: [
     StatusBar,

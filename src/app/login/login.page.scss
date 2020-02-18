@@ -3,5 +3,9 @@ ion-title {
 }
 
 ion-content {
- background-color : #dd8787;
+ --ion-background-color: linear-gradient(#457fca,#5691c8);
+}
+
+ion-item {
+    --ion-background-color: transparent!important;
 }
